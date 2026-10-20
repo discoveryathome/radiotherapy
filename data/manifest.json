@@ -1,0 +1,121 @@
+{
+  "dataset_doi": "10.5524/100110",
+  "archive_url": "https://s3.ap-northeast-1.wasabisys.com/gigadb-datasets/live/pub/10.5524/100001_101000/100110/TG119.zip",
+  "archive_sha256": "6479d0d2d2638c390908b4b20ba6e6e2fd5dbd3781b0291390daca169606d8c0",
+  "angles": [
+    0,
+    72,
+    144,
+    216,
+    288
+  ],
+  "grid_shape_ap_lr_si": [
+    167,
+    167,
+    129
+  ],
+  "dose_unit": "Gy",
+  "fluence_unit": "MU",
+  "voxel_spacing_cm": [
+    0.300616,
+    0.300616,
+    0.25
+  ],
+  "files": [
+    {
+      "path": "data/raw/Gantry0_Couch0_BEAMINFO.mat",
+      "sha256": "8e3d2896cbd13d87bdd9723e841d1dd061acad215032db8cecc6ae28170338d1",
+      "bytes": 526
+    },
+    {
+      "path": "data/raw/Gantry0_Couch0_D.mat",
+      "sha256": "30df0046d77b163bd6c99d23fd28ed72d01db55e870c6f770201b69759fbf451",
+      "bytes": 4408215
+    },
+    {
+      "path": "data/raw/Gantry144_Couch0_BEAMINFO.mat",
+      "sha256": "b0ad08d4f9edbae45a34f32ab003b1f078f25dec50e8011a86a45111d35ea622",
+      "bytes": 522
+    },
+    {
+      "path": "data/raw/Gantry144_Couch0_D.mat",
+      "sha256": "b1832273a47b594c1ac1a8b000ca7f7e559c7c97f328b5105bb4fda922df35eb",
+      "bytes": 5146679
+    },
+    {
+      "path": "data/raw/Gantry216_Couch0_BEAMINFO.mat",
+      "sha256": "172adad01b6fcd741cbd763215b7497fafed82c885b56836ffc1dccf305c9c3e",
+      "bytes": 522
+    },
+    {
+      "path": "data/raw/Gantry216_Couch0_D.mat",
+      "sha256": "ed9ad02d21061035c232b872de006684ff152c44bca6639bd2d2e6fd5fdf04f8",
+      "bytes": 5078864
+    },
+    {
+      "path": "data/raw/Gantry288_Couch0_BEAMINFO.mat",
+      "sha256": "a21dedde7f1523d1f07eaa931574a72987fa6610a2389c9027704754e32e3b87",
+      "bytes": 518
+    },
+    {
+      "path": "data/raw/Gantry288_Couch0_D.mat",
+      "sha256": "1b62126516b570c7a03e27cb1c484180f1804e087669dca3887cde57a3a376a0",
+      "bytes": 5621835
+    },
+    {
+      "path": "data/raw/Gantry72_Couch0_BEAMINFO.mat",
+      "sha256": "e7f320ec221bdca55e271d8a53bc6705fdd15fa3c0692a27bc94e979798d94dc",
+      "bytes": 516
+    },
+    {
+      "path": "data/raw/Gantry72_Couch0_D.mat",
+      "sha256": "c7ee291c625b698266c9e05464e5f9bb33baff0381953dc54385437cd2866162",
+      "bytes": 5591686
+    },
+    {
+      "path": "data/raw/BODY_VOILIST.mat",
+      "sha256": "ed5b531ea81171cebd1ca95e45c4399667e97b0329daf2acd04c75a5b17dc70c",
+      "bytes": 851561
+    },
+    {
+      "path": "data/raw/Core_VOILIST.mat",
+      "sha256": "3531d728e7f537a4bac3c316958ec96d39748e84b11caf9c3e153a84d8bda83a",
+      "bytes": 2424
+    },
+    {
+      "path": "data/raw/OuterTarget_VOILIST.mat",
+      "sha256": "0fbc072613df2497c2e32815fe8a3a6ef0e5514b51e4a43aeea13c36babe1e78",
+      "bytes": 11764
+    },
+    {
+      "path": "data/raw/Gantry0_Couch0_beamletSol.mat",
+      "sha256": "a8e592745c933079e33affb17ac75db937d74b683ee902a48521994ae9bcca39",
+      "bytes": 979
+    },
+    {
+      "path": "data/raw/Gantry144_Couch0_beamletSol.mat",
+      "sha256": "f2ee45502ee8843afd6bc4d057163f55b1ec0256a9845d1e14b3d509f343d8ce",
+      "bytes": 921
+    },
+    {
+      "path": "data/raw/Gantry216_Couch0_beamletSol.mat",
+      "sha256": "2e064015d6a260e59168239a884281c1f47d3d2d2397895c50e9db50a0d7864a",
+      "bytes": 918
+    },
+    {
+      "path": "data/raw/Gantry288_Couch0_beamletSol.mat",
+      "sha256": "15a4b0ab3e257c9bb90a2478fa3ff73ccec2596e62caca13c44cd9388a90e4d8",
+      "bytes": 768
+    },
+    {
+      "path": "data/raw/Gantry72_Couch0_beamletSol.mat",
+      "sha256": "f716dddecefd37a0dd953c8a3db7ddb804564d3e0e7c87dcb549f76a8cb7dc9a",
+      "bytes": 763
+    },
+    {
+      "path": "data/raw/CTVOXEL_INFO_TG119.txt",
+      "sha256": "12241ceb0345114314473d0856abb24c3659fd9c4df1cd10a0569ba826359cdb",
+      "bytes": 464
+    }
+  ]
+}

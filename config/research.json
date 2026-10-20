@@ -1,0 +1,17 @@
+{
+  "id": "research", "version": 1,
+  "description": "50 Gy synthetic phantom research benchmark; dose constraints adapted from CORT Table 3, not a clinical protocol",
+  "prescription_gy": 50.0,
+  "target_min_gy": 50.0, "target_max_gy": 60.0, "core_max_gy": 60.0,
+  "core_mean_max_gy": 20.0, "healthy_mean_max_gy": 10.0,
+  "max_beamlet_mu": 5000.0, "max_total_beamlet_mu": 400000.0,
+  "objective_weights": {"Core": 1.0, "HealthyBody": 1.0},
+  "dose_tolerance_gy": 0.0001, "fluence_tolerance_mu": 0.00001,
+  "active_mu_tolerance": 0.000001,
+  "primary_beam_budget": 3,
+  "comparison_budgets": [1,2,3,4,5],
+  "tg119_reference": {"target_d95_min_gy": 50.0, "target_d10_max_gy": 55.0, "core_d5_max_gy": 25.0},
+  "reference_note": "TG119 easier C-shape reference goals reported separately; original TG119 uses nine fields. Research feasibility does not imply these goals pass.",
+  "sensitivity": {"output_gains": [0.98,1.0,1.02], "rounding_mu": [1.0,10.0], "core_objective_weights": [0.5,2.0], "robust_training_gains": [0.98,1.02]},
+  "frozen_before_new_optimization": true
+}

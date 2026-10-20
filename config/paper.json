@@ -1,0 +1,12 @@
+{
+  "id": "paper", "version": 1,
+  "description": "Exact CORT Table 3 LP reproduction; not a quality treatment plan",
+  "prescription_gy": 1.0,
+  "target_min_gy": 1.0, "target_max_gy": 1.2, "core_max_gy": 1.2,
+  "max_beamlet_mu": null, "max_total_beamlet_mu": null,
+  "core_mean_max_gy": null, "healthy_mean_max_gy": null,
+  "objective_weights": {"Core": 1.0, "BODY": 1.0},
+  "dose_tolerance_gy": 0.000001, "fluence_tolerance_mu": 0.000001,
+  "active_mu_tolerance": 0.000001,
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4326207/ Table 3"
+}

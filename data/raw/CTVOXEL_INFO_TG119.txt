@@ -1,0 +1,11 @@
+number of voxels [cerr x] right -> left = 167
+number of voxels [cerr gui y] patient post[back side] -> ant[front side] = 167
+number of voxels in [cerr gui z] patient head -> feet = 129
+x position of dose voxel 1 = -25
+y position of dose voxel 1 = 25
+z position of dose voxel 1 = -16
+x [horizontal] voxel size = 0.300616
+y [vertical] voxel size = -0.300616
+z [sup/inf] voxel size = 0.25
+isocenter [x,y,z] = -0.175254, 1.61812, -0.0173644
+beamlet size [cmxcm] = 1x1
