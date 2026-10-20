@@ -61,6 +61,8 @@ The quarter-size guard had a lower objective but was rejected as infeasible. A d
 
 ![Contributor progress](../results/contributor_progress.png)
 
+The final discrete plan has Core D5 about 34.10 Gy and an unconstrained healthy-body maximum about 69.82 Gy. Mean-dose objectives do not control all hot spots. Its target minimum is only 50.00003 Gy, and independent ±2% output-gain checks fail. Thus the nominal score improvement spends dose margin; it is not a robustness or clinical-safety improvement. These limitations must be visible in any public demo.
+
 ## Suitability against the featured-pilot criteria
 
 | Criterion | Assessment from this trial |

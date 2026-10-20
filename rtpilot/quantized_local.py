@@ -43,5 +43,6 @@ def main():
     save_plan(path,xx,'research',4,{'method':'monotone 10-MU coordinate and pair exchange','steps':len(history)-1,'start':base['path']})
     r,d=ev.evaluate(path)
     result={'path':str(path.relative_to(ROOT)),'start':base['path'],'history':history,'evaluation':r,'dose_recomputation_max_error_gy':float(np.abs(d-D@xx).max()),'grid_residual_mu':float(np.abs(xx/q-np.rint(xx/q)).max()),'seconds':time.perf_counter()-start,'cpu_seconds':time.process_time()-cpu,'mode':args.mode,'step_budget':args.steps,'stopping_note':'Bounded heuristic; no global discrete-optimality claim.'}
+    result['output_gain_sensitivity']=[{'gain':g,'evaluation':ev.assess(xx,ev.dose(xx*g),cfg,4)} for g in cfg['sensitivity']['output_gains']]
     write_json(ROOT/f'trial/{args.name}.json',result);print(json.dumps(result,indent=2),flush=True)
 if __name__=='__main__':main()

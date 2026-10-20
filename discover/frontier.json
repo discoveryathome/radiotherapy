@@ -55,7 +55,7 @@
     "updated": "updated"
   },
   "reproduce": "bash scripts/reproduce.sh",
-  "reproduce_full": "See README.md and docs/report.md for optimizer and trial regeneration commands.",
+  "reproduce_full": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m rtpilot.run && .venv/bin/python -m rtpilot.robust && .venv/bin/python -m rtpilot.make_certificates && .venv/bin/python -m rtpilot.rounding_guard && .venv/bin/python -m rtpilot.quantized_local --steps 800 --name extended-pairs",
   "reproduce_minutes": 3,
   "prerequisites": [
     "Python virtual environment with requirements.lock binary wheels; original pinned data included"

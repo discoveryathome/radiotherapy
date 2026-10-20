@@ -1,0 +1,51 @@
+[
+  {
+    "task": "verification-01",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "returncode": 0,
+    "seconds": 17.789601708063856,
+    "output": "/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/evaluate.py:29: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.\n        That means the default return type will be a sparse array.\n        Unless you use * instead of @, ** for matrix power, or you depend\n        on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.\n        See the spmatrix to sparray migration guide for details.\n        https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html\n        \n  m=loadmat(self.root/f'data/raw/Gantry{a}_Couch0_D.mat')['D'].tocsc()\ntest_bad_schema_pins_and_angle_order (test_evaluator.EvaluationTests.test_bad_schema_pins_and_angle_order) ... ok\ntest_bad_shape_and_nonfinite (test_evaluator.EvaluationTests.test_bad_shape_and_nonfinite) ... ok\ntest_beam_budget_rejected (test_evaluator.EvaluationTests.test_beam_budget_rejected) ... ok\ntest_hand_calculated_metrics (test_evaluator.EvaluationTests.test_hand_calculated_metrics) ... ok\ntest_index_geometry (test_evaluator.EvaluationTests.test_index_geometry) ... ok\ntest_infeasibility_ray_corruption (test_evaluator.EvaluationTests.test_infeasibility_ray_corruption) ... ok\ntest_low_dose_rejected (test_evaluator.EvaluationTests.test_low_dose_rejected) ... ok\ntest_negative_fluence_rejected (test_evaluator.EvaluationTests.test_negative_fluence_rejected) ... ok\ntest_overdose_rejected (test_evaluator.EvaluationTests.test_overdose_rejected) ... ok\ntest_source_controls (test_evaluator.EvaluationTests.test_source_controls) ... ok\ntest_tampered_raw_file_rejected (test_evaluator.EvaluationTests.test_tampered_raw_file_rejected) ... ok\ntest_zero_fluence_rejected (test_evaluator.EvaluationTests.test_zero_fluence_rejected) ... ok\ntest_adaptive_separates_unseen_constraints (test_solvers.SolverTests.test_adaptive_separates_unseen_constraints) ... ok\ntest_infeasible (test_solvers.SolverTests.test_infeasible) ... ok\ntest_known_lp (test_solvers.SolverTests.test_known_lp) ... ok\ntest_warm_vector_bounds (test_solvers.SolverTests.test_warm_vector_bounds) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 13.776s\n\nOK\n"
+  },
+  {
+    "task": "discrete-search-01",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.verify"
+    ],
+    "returncode": 0,
+    "seconds": 39.99973612499889,
+    "output": "PASS published all-ones values and original LP witness\nPASS independent full-grid evaluation of 12 plans\nPASS all saved global-gain sensitivity metrics\nPASS baseline reproduction claim; optimizer re-solve is available via rtpilot.run\nPASS extra five-beam robust witness and all scenarios\nPASS all ten independent numerical three-beam infeasibility checks\n"
+  },
+  {
+    "task": "delivery-model-01",
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.verify",
+      "--controls-only"
+    ],
+    "returncode": 0,
+    "seconds": 6.359268500003964,
+    "output": "PASS published all-ones values and original LP witness\n"
+  },
+  {
+    "task": "literature-01",
+    "command": [
+      ".venv/bin/python",
+      "-c",
+      "from pathlib import Path; print(Path('docs/literature.md').read_text())"
+    ],
+    "returncode": 0,
+    "seconds": 0.09719758294522762,
+    "output": "# Literature and claim audit\n\nAudit date: 2026-10-20. Sources are primary papers, original data and AAPM material.\nThere is no established single best score for arbitrary CORT objectives.\n\n1. Craft et al. (2014), [CORT paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC4326207/),\n   [data](https://doi.org/10.5524/100110). Full text and archive inspected. Confirms\n   the five-angle phantom, Gy/MU units, voxel mapping, Table 2 controls, and Table 3\n   LP formulation/results. Fixed-beam convex fluence optimization is established;\n   beam selection and aperture restrictions introduce discrete/nonconvex choices.\n   The paper explicitly limits aperture-dose accuracy available from these matrices.\n2. AAPM, [TG119 instructions](https://www.aapm.org/pubs/tg119/TG119_Instructions_102109.pdf).\n   C-shape easier-case dose-volume goals inform contextual metrics. This is not\n   authorization to apply them to patients or a claim to reproduce commissioning.\n3. O'Connor et al. (2017), [Fast non-coplanar beam orientation optimization based on\n   group sparsity](https://arxiv.org/abs/1710.05308). Establishes that group-sparsity\n   methods and accelerated proximal optimization for large angle sets predate this\n   pilot. A new implementation alone is not novel. Abstract reviewed.\n4. [Beam angle optimization for proton therapy via group-sparsity based angle\n   generation](https://pmc.ncbi.nlm.nih.gov/articles/PMC10272076/) (2023).\n   Exhaustive small-instance comparisons and angle replacement are relevant methods.\n   Proton modality differs from this photon phantom; numerical gains do not transfer.\n5. [Beam orientation optimization in IMRT using sparse mixed integer programming\n   and non-convex fluence map optimization](https://pubmed.ncbi.nlm.nih.gov/40570902/)\n   (2025). Recent mixed-integer/SOCP work shows this remains an active area.\n   Abstract reviewed; exact methods and instances require full-text audit before\n   claiming superiority to them.\n\nUser premises: original CORT matrices exist (confirmed); a manageable CPU case exists\n(confirmed by file size and this pilot's execution); prescribed target coverage can\nbe balanced with healthy-structure dose (model supported, must be tested under each\nfrozen profile); genuine research improvement is accessible (unproven, assessed in\nthe contributor trial rather than assumed).\n\nSettled limits: five-beam enumeration leaves no algorithmic plan-quality frontier\nonce every feasible LP is solved reliably. More CPU cannot improve a solved LP.\nLarger angle sets, dose-volume feasibility and delivery decisions offer harder\nproblems, but require strong baselines and additional validation. Output scaling\nis only a sensitivity model; CORT does not supply validated setup scenarios.\n\n"
+  }
+]

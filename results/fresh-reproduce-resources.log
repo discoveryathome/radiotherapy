@@ -1,0 +1,47 @@
+/Users/colkitt/discover-work/incubatedPilots/radiotherapy/fresh-check/rtpilot/evaluate.py:29: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.
+        That means the default return type will be a sparse array.
+        Unless you use * instead of @, ** for matrix power, or you depend
+        on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.
+        See the spmatrix to sparray migration guide for details.
+        https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html
+        
+  m=loadmat(self.root/f'data/raw/Gantry{a}_Couch0_D.mat')['D'].tocsc()
+test_bad_schema_pins_and_angle_order (test_evaluator.EvaluationTests.test_bad_schema_pins_and_angle_order) ... ok
+test_bad_shape_and_nonfinite (test_evaluator.EvaluationTests.test_bad_shape_and_nonfinite) ... ok
+test_beam_budget_rejected (test_evaluator.EvaluationTests.test_beam_budget_rejected) ... ok
+test_hand_calculated_metrics (test_evaluator.EvaluationTests.test_hand_calculated_metrics) ... ok
+test_index_geometry (test_evaluator.EvaluationTests.test_index_geometry) ... ok
+test_infeasibility_ray_corruption (test_evaluator.EvaluationTests.test_infeasibility_ray_corruption) ... ok
+test_low_dose_rejected (test_evaluator.EvaluationTests.test_low_dose_rejected) ... ok
+test_negative_fluence_rejected (test_evaluator.EvaluationTests.test_negative_fluence_rejected) ... ok
+test_overdose_rejected (test_evaluator.EvaluationTests.test_overdose_rejected) ... ok
+test_source_controls (test_evaluator.EvaluationTests.test_source_controls) ... ok
+test_tampered_raw_file_rejected (test_evaluator.EvaluationTests.test_tampered_raw_file_rejected) ... ok
+test_zero_fluence_rejected (test_evaluator.EvaluationTests.test_zero_fluence_rejected) ... ok
+test_adaptive_separates_unseen_constraints (test_solvers.SolverTests.test_adaptive_separates_unseen_constraints) ... ok
+test_infeasible (test_solvers.SolverTests.test_infeasible) ... ok
+test_known_lp (test_solvers.SolverTests.test_known_lp) ... ok
+test_warm_vector_bounds (test_solvers.SolverTests.test_warm_vector_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.538s
+
+OK
+       67.34 real        12.15 user         1.08 sys
+           490668032  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               91497  page reclaims
+                1111  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 592  voluntary context switches
+               39140  involuntary context switches
+            19545736  instructions retired
+            14704213  cycles elapsed
+             1229088  peak memory footprint

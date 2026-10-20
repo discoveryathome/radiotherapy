@@ -1,0 +1,26 @@
+{
+  "base": "2b8ee429328cc775be439e27857658e829880436",
+  "checked_at": "2026-10-20T20:44:15.251785+00:00",
+  "files": [
+    {
+      "path": "data/manifest.json",
+      "unchanged": true,
+      "sha256": "7fa83712b659402d0243e98a525a8606172f0eb56d2ea6d70a2e3fb6516145ba"
+    },
+    {
+      "path": "config/research.json",
+      "unchanged": true,
+      "sha256": "6e63b6705532f02742bfff50bf6fa9cca8c2faa52470df808bdd177b32e6489e"
+    },
+    {
+      "path": "config/paper.json",
+      "unchanged": true,
+      "sha256": "c7babe8aee3b8f97727aedfa8088c43ca69282c8b951c4cfb1a4ed413361ce60"
+    },
+    {
+      "path": "rtpilot/evaluate.py",
+      "unchanged": true,
+      "sha256": "a20d8cd3bbe8bdcbb8ffb59443687e80457fec0cdf81cf0bd40b5546bf06510f"
+    }
+  ]
+}

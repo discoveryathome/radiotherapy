@@ -22,6 +22,10 @@ def main():
             if 'rounding' in row['path'] or report.name in ['quantized-local.json','decrement-only.json','extended-pairs.json','quantized.json']:
                 p=json.loads((ROOT/row['path']).read_text());x=np.array(p['fluence_mu'])
                 if np.max(np.abs(x/10-np.rint(x/10)))>1e-9:raise AssertionError('Not on the 10-MU grid')
+            for sc in row.get('output_gain_sensitivity',[]):
+                p,x,_,cfg=ev.read_plan(ROOT/row['path'])
+                if sc['gain'] not in cfg['sensitivity']['output_gains']:raise AssertionError('Unexpected trial gain')
+                assert_equivalent(ev.assess(x,ev.dose(x*sc['gain']),cfg,p['beam_budget']),sc['evaluation'])
             count+=1
     if count<1:raise AssertionError('No trial witnesses')
     print(f'PASS independent dose, metrics, feasibility and grid checks for {count} trial witnesses')
