@@ -1,0 +1,3 @@
+/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/optimize.py:39: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  result=linprog(c,A_ub=A,b_ub=b,bounds=(0,self.cfg.get('max_beamlet_mu')),method=method,
+paper_lp feasible= True score= 0.350921 seconds= 122.17

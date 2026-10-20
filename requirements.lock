@@ -1,7 +1,10 @@
 attrs==26.1.0
+cffi==2.1.1
+clarabel==0.11.1
 contourpy==1.4.0
 cycler==0.12.1
 fonttools==4.67.0
+highspy==1.15.1
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 kiwisolver==1.5.1
@@ -9,6 +12,7 @@ matplotlib==3.11.2
 numpy==2.5.4
 packaging==26.3
 pillow==13.0.0
+pycparser==3.11
 pyparsing==3.3.3
 python-dateutil==2.9.0.post0
 referencing==0.37.0

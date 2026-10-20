@@ -1,0 +1,4 @@
+subset_0_72_144_216_288 all_voxel_caps status 2
+subset_0_72_144_216_288 hot_voxel_exemptions status 2
+subset_0_72_144_216 all_voxel_caps status 2
+subset_0_72_144_216 hot_voxel_exemptions status 2

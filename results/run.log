@@ -1,0 +1,43 @@
+paper_lp feasible= True score= 0.350921 seconds= 22.33
+uniform feasible= False score= 57.799774 seconds= 0
+quadratic_penalty feasible= False score= 16.051606 seconds= 9.7
+subset_0_72_144_216_288 feasible= True score= 16.904298 seconds= 19.1
+subset_0_72_144_216 feasible= True score= 20.521648 seconds= 23.98
+subset (0, 72, 144, 288) status 2 HighsModelStatus.kInfeasible
+subset (0, 72, 216, 288) status 2 HighsModelStatus.kInfeasible
+subset_0_144_216_288 feasible= True score= 22.393661 seconds= 16.44
+subset (72, 144, 216, 288) status 2 HighsModelStatus.kInfeasible
+subset (0, 72, 144) status 2 HighsModelStatus.kInfeasible
+subset (0, 72, 216) status 2 HighsModelStatus.kInfeasible
+subset (0, 72, 288) status 2 HighsModelStatus.kInfeasible
+subset (0, 144, 216) status 2 HighsModelStatus.kInfeasible
+subset (0, 144, 288) status 2 HighsModelStatus.kInfeasible
+subset (0, 216, 288) status 2 HighsModelStatus.kInfeasible
+subset (72, 144, 216) status 2 HighsModelStatus.kInfeasible
+subset (72, 144, 288) status 2 HighsModelStatus.kInfeasible
+subset (72, 216, 288) status 2 HighsModelStatus.kInfeasible
+subset (144, 216, 288) status 2 HighsModelStatus.kInfeasible
+subset (0, 72) status 2 HighsModelStatus.kInfeasible
+subset (0, 144) status 2 HighsModelStatus.kInfeasible
+subset (0, 216) status 2 HighsModelStatus.kInfeasible
+subset (0, 288) status 2 HighsModelStatus.kInfeasible
+subset (72, 144) status 2 HighsModelStatus.kInfeasible
+subset (72, 216) status 2 HighsModelStatus.kInfeasible
+subset (72, 288) status 2 HighsModelStatus.kInfeasible
+subset (144, 216) status 2 HighsModelStatus.kInfeasible
+subset (144, 288) status 2 HighsModelStatus.kInfeasible
+subset (216, 288) status 2 HighsModelStatus.kInfeasible
+subset (0,) status 2 HighsModelStatus.kInfeasible
+subset (72,) status 2 HighsModelStatus.kInfeasible
+subset (144,) status 2 HighsModelStatus.kInfeasible
+subset (216,) status 2 HighsModelStatus.kInfeasible
+subset (288,) status 2 HighsModelStatus.kInfeasible
+best_nominal feasible= True score= 20.521648 seconds= 0
+rounded_1 feasible= False score= 20.521112 seconds= 0
+rounded_10 feasible= False score= 20.523458 seconds= 0
+weight_0.5 feasible= True score= 20.571496 seconds= 17.17
+weight_2.0 feasible= True score= 20.594838 seconds= 18.53
+/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/optimize.py:53: OptimizeWarning: Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim.
+  result=linprog(c,A_ub=A,b_ub=b,bounds=(0,self.cfg.get('max_beamlet_mu')),method=method,
+tight_ipm feasible= True score= 20.521648 seconds= 111.99
+COMPLETE 12 plans; 361.0 seconds

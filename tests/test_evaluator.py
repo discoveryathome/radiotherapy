@@ -46,6 +46,23 @@ class EvaluationTests(unittest.TestCase):
     def test_negative_fluence_rejected(self):
         x=self.x.copy();x[0]=-1
         self.assertFalse(self.ev.assess(x,self.d,self.cfg,5)['feasible'])
+    def test_tampered_raw_file_rejected(self):
+        with tempfile.TemporaryDirectory(dir=ROOT/'results') as tmp:
+            root=Path(tmp);(root/'data').mkdir()
+            (root/'data/bad.mat').write_bytes(b'wrong bytes')
+            (root/'data/manifest.json').write_text(json.dumps({'files':[{'path':'data/bad.mat','sha256':'0'*64}]}))
+            with self.assertRaisesRegex(ValueError,'Data SHA256 mismatch'):Evaluator(root)
+
+    def test_infeasibility_ray_corruption(self):
+        from rtpilot.certify import check
+        doc=json.loads((ROOT/'results/infeasibility.json').read_text())
+        info=doc['cases'][0]['solver'];cfg=json.loads((ROOT/'config/research.json').read_text())
+        self.assertTrue(check(info,self.ev,cfg)['verified_numerically'])
+        bad=json.loads(json.dumps(info));bad['farkas']['multipliers'][0]=-1
+        with self.assertRaises(ValueError):check(bad,self.ev,cfg)
+        bad=json.loads(json.dumps(info));bad['farkas']['multipliers']=[0]*len(bad['farkas']['rows'])
+        self.assertFalse(check(bad,self.ev,cfg)['verified_numerically'])
+
     def test_index_geometry(self):
         # AP changes fastest, LR next, SI slowest (CORT Figure 5).
         for v in [0,166,167,167*167,3597680]:

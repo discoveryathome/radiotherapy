@@ -1,0 +1,126 @@
+{
+  "plans": [
+    {
+      "strategy": "convex_all_voxel",
+      "iteration": 0,
+      "optimizer": {
+        "status": 1,
+        "message": "HighsModelStatus.kTimeLimit",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 6.708561072640175e-07,
+            "full_max_violation": 48.64094306725579
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 9.863738044458462e-07,
+            "full_max_violation": 38.20919950368474
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 1.2914250612533717e-06,
+            "full_max_violation": 28.329473125138023
+          },
+          {
+            "round": 3,
+            "rows": 1026,
+            "objective": 4.180756889912611,
+            "full_max_violation": 104132.00614658213
+          },
+          {
+            "round": 4,
+            "rows": 1282,
+            "objective": 5.030489195519151,
+            "full_max_violation": 85574.45240371447
+          },
+          {
+            "round": 5,
+            "rows": 1538,
+            "objective": 5.1974085447246665,
+            "full_max_violation": 74968.75990458275
+          },
+          {
+            "round": 6,
+            "rows": 1794,
+            "objective": 5.269071008308337,
+            "full_max_violation": 58274.60810411925
+          },
+          {
+            "round": 7,
+            "rows": 2050,
+            "objective": 5.568232918664351,
+            "full_max_violation": 75495.33480170654
+          }
+        ],
+        "seconds": 63.3253060830757,
+        "cpu_seconds": 7.241926000000001
+      }
+    },
+    {
+      "strategy": "dose_volume_active_set",
+      "iteration": 0,
+      "optimizer": {
+        "status": 1,
+        "message": "HighsModelStatus.kTimeLimit",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 5.619373373090424e-07,
+            "full_max_violation": 45.85437520060534
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 9.88673517629872e-07,
+            "full_max_violation": 39.170874006471635
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 1.147064053768524e-06,
+            "full_max_violation": 40.8048423999372
+          },
+          {
+            "round": 3,
+            "rows": 1026,
+            "objective": 1.3994614998588149e-06,
+            "full_max_violation": 23.641782503776952
+          },
+          {
+            "round": 4,
+            "rows": 1282,
+            "objective": 2.2109790440963586,
+            "full_max_violation": 127715.87627844943
+          },
+          {
+            "round": 5,
+            "rows": 1538,
+            "objective": 2.500495775389681,
+            "full_max_violation": 82621.82638987148
+          },
+          {
+            "round": 6,
+            "rows": 1794,
+            "objective": 2.9846181329353634,
+            "full_max_violation": 99810.48374322086
+          },
+          {
+            "round": 7,
+            "rows": 2050,
+            "objective": 3.1487801409572564,
+            "full_max_violation": 10.7802593692913
+          }
+        ],
+        "seconds": 68.77939399995375,
+        "cpu_seconds": 7.330788999999999
+      }
+    }
+  ],
+  "elapsed_seconds": 143.50476849998813,
+  "cpu_seconds": 16.548344999999998
+}

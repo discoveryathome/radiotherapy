@@ -1,0 +1,11 @@
+{
+  "status": 1,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "seconds": 112.50107300002128,
+  "cpu_seconds": 18.987386,
+  "quantum_mu": 10.0,
+  "neighborhood": "floor(x/10)-2 through ceil(x/10)+2, clipped to original box",
+  "mip_gap": null,
+  "dual_bound": null,
+  "nodes": null
+}

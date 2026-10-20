@@ -1,0 +1,10 @@
+PASS numerical infeasibility ray [0, 72, 144] 2.221501348464209
+PASS numerical infeasibility ray [0, 72, 216] 1.8391221151097408
+PASS numerical infeasibility ray [0, 72, 288] 2.4204355365607864
+PASS numerical infeasibility ray [0, 144, 216] 0.49155957131515243
+PASS numerical infeasibility ray [0, 144, 288] 0.07569124647539058
+PASS numerical infeasibility ray [0, 216, 288] 1.0951164262565023
+PASS numerical infeasibility ray [72, 144, 216] 0.4944262751561512
+PASS numerical infeasibility ray [72, 144, 288] 3.2242553418972064
+PASS numerical infeasibility ray [72, 216, 288] 4.2497740205736685
+PASS numerical infeasibility ray [144, 216, 288] 1.7807886461825042

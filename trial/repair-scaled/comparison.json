@@ -1,0 +1,200 @@
+{
+  "plans": [
+    {
+      "strategy": "convex_all_voxel",
+      "iteration": 0,
+      "optimizer": {
+        "status": 1,
+        "message": "HighsModelStatus.kTimeLimit",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 0.0,
+            "full_max_violation": 45.939331323573896
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 0.0,
+            "full_max_violation": 43.20225810132248
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 0.0,
+            "full_max_violation": 27.83206365290134
+          },
+          {
+            "round": 3,
+            "rows": 1026,
+            "objective": 1.805747983573054,
+            "full_max_violation": 77566.0120493687
+          },
+          {
+            "round": 4,
+            "rows": 1282,
+            "objective": 2.060694507692811,
+            "full_max_violation": 90196.27096318733
+          },
+          {
+            "round": 5,
+            "rows": 1538,
+            "objective": 4.618142355931024,
+            "full_max_violation": 91359.06786010723
+          },
+          {
+            "round": 6,
+            "rows": 1794,
+            "objective": 5.4612072311653685,
+            "full_max_violation": 75397.82982178329
+          },
+          {
+            "round": 7,
+            "rows": 2050,
+            "objective": 5.70716084225258,
+            "full_max_violation": 12.741933235973647
+          },
+          {
+            "round": 8,
+            "rows": 2306,
+            "objective": 6.275235863185918,
+            "full_max_violation": 17.80725834417302
+          },
+          {
+            "round": 9,
+            "rows": 2562,
+            "objective": 6.766904399602139,
+            "full_max_violation": 13.476771576879258
+          },
+          {
+            "round": 10,
+            "rows": 2818,
+            "objective": 7.007205902651154,
+            "full_max_violation": 11.167486035626837
+          },
+          {
+            "round": 11,
+            "rows": 3074,
+            "objective": 7.7837000516021995,
+            "full_max_violation": 9.077923508417626
+          },
+          {
+            "round": 12,
+            "rows": 3330,
+            "objective": 8.058634970582604,
+            "full_max_violation": 4.537793599470618
+          }
+        ],
+        "seconds": 62.53203545801807,
+        "cpu_seconds": 12.484169,
+        "secondary_objective": "minimize uniform DVH-goal relaxation only"
+      }
+    },
+    {
+      "strategy": "dose_volume_active_set",
+      "iteration": 0,
+      "optimizer": {
+        "status": 1,
+        "message": "HighsModelStatus.kTimeLimit",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 0.0,
+            "full_max_violation": 48.6467344829541
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 0.0,
+            "full_max_violation": 42.241627196107274
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 0.0,
+            "full_max_violation": 29.694075863877817
+          },
+          {
+            "round": 3,
+            "rows": 1026,
+            "objective": 0.0,
+            "full_max_violation": 39.60171338998008
+          },
+          {
+            "round": 4,
+            "rows": 1282,
+            "objective": 0.0,
+            "full_max_violation": 25.54475668546982
+          },
+          {
+            "round": 5,
+            "rows": 1538,
+            "objective": 2.198267788368581,
+            "full_max_violation": 70941.94064488687
+          },
+          {
+            "round": 6,
+            "rows": 1794,
+            "objective": 2.875119557622729,
+            "full_max_violation": 92649.09825286409
+          },
+          {
+            "round": 7,
+            "rows": 2050,
+            "objective": 3.185188192238443,
+            "full_max_violation": 20.12949677179219
+          },
+          {
+            "round": 8,
+            "rows": 2306,
+            "objective": 3.452652078810523,
+            "full_max_violation": 13.55147083037182
+          },
+          {
+            "round": 9,
+            "rows": 2562,
+            "objective": 3.519462414422727,
+            "full_max_violation": 11.183657155282148
+          },
+          {
+            "round": 10,
+            "rows": 2818,
+            "objective": 3.82295034518441,
+            "full_max_violation": 6.132919018650156
+          },
+          {
+            "round": 11,
+            "rows": 3074,
+            "objective": 3.9172588988240853,
+            "full_max_violation": 4.6897361606597485
+          },
+          {
+            "round": 12,
+            "rows": 3330,
+            "objective": 4.153772965397276,
+            "full_max_violation": 4.017205498888131
+          },
+          {
+            "round": 13,
+            "rows": 3586,
+            "objective": 4.214291126439131,
+            "full_max_violation": 3.5082287541602426
+          },
+          {
+            "round": 14,
+            "rows": 3685,
+            "objective": 4.225431501995939,
+            "full_max_violation": 0.9785825542103694
+          }
+        ],
+        "seconds": 61.15717100002803,
+        "cpu_seconds": 13.714285000000002,
+        "secondary_objective": "minimize uniform DVH-goal relaxation only"
+      }
+    }
+  ],
+  "elapsed_seconds": 133.91696420905646,
+  "cpu_seconds": 28.254512000000002
+}

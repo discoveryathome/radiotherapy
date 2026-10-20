@@ -11,13 +11,19 @@ test_bad_shape_and_nonfinite (test_evaluator.EvaluationTests.test_bad_shape_and_
 test_beam_budget_rejected (test_evaluator.EvaluationTests.test_beam_budget_rejected) ... ok
 test_hand_calculated_metrics (test_evaluator.EvaluationTests.test_hand_calculated_metrics) ... ok
 test_index_geometry (test_evaluator.EvaluationTests.test_index_geometry) ... ok
+test_infeasibility_ray_corruption (test_evaluator.EvaluationTests.test_infeasibility_ray_corruption) ... ok
 test_low_dose_rejected (test_evaluator.EvaluationTests.test_low_dose_rejected) ... ok
 test_negative_fluence_rejected (test_evaluator.EvaluationTests.test_negative_fluence_rejected) ... ok
 test_overdose_rejected (test_evaluator.EvaluationTests.test_overdose_rejected) ... ok
 test_source_controls (test_evaluator.EvaluationTests.test_source_controls) ... ok
+test_tampered_raw_file_rejected (test_evaluator.EvaluationTests.test_tampered_raw_file_rejected) ... ok
 test_zero_fluence_rejected (test_evaluator.EvaluationTests.test_zero_fluence_rejected) ... ok
+test_adaptive_separates_unseen_constraints (test_solvers.SolverTests.test_adaptive_separates_unseen_constraints) ... ok
+test_infeasible (test_solvers.SolverTests.test_infeasible) ... ok
+test_known_lp (test_solvers.SolverTests.test_known_lp) ... ok
+test_warm_vector_bounds (test_solvers.SolverTests.test_warm_vector_bounds) ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 11.205s
+Ran 16 tests in 7.130s
 
 OK

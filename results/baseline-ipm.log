@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/run.py", line 90, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/run.py", line 31, in main
+    if x is None: raise RuntimeError(pinfo)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'angles': [0, 72, 144, 216, 288], 'status': 1, 'message': 'Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)', 'seconds': 94.477982792072, 'iterations': 12, 'gains': [1.0], 'core_weight': None, 'method': 'highs-ipm'}

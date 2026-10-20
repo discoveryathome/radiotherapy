@@ -53,37 +53,35 @@ def main():
         chosen,(x,info)=min(candidates,key=lambda t:t[1][1]['objective'])
         greedy.append({'budget':k,'angles':list(chosen),'objective_gy':info['objective']})
     feasible3=[(a,p) for a,p in cache.items() if len(a)==3 and p[0] is not None]
-    best3=min(feasible3,key=lambda t:t[1][1]['objective']) if feasible3 else None
+    available=[(a,p) for a,p in cache.items() if p[0] is not None]
+    selected_k=3 if feasible3 else min(len(a) for a,p in available)
+    pool=[(a,p) for a,p in available if len(a)==selected_k]
+    angles,(x,info)=min(pool,key=lambda t:t[1][1]['objective'])
     sensitivity=[]
-    if best3:
-        angles,(x,info)=best3
-        base=record('best_three',x,'research',3,{'method':'enumeration incumbent','angles':list(angles)})
-        # Synthetic global output gain; not geometry/setup robustness.
+    record('best_nominal',x,'research',selected_k,{'method':'enumeration incumbent at smallest feasible budget','angles':list(angles)})
+    for gain in cfg['sensitivity']['output_gains']:
+        r=ev.assess(x,ev.dose(x*gain),cfg,selected_k)
+        sensitivity.append({'kind':'output_gain','value':gain,'plan':'best_nominal','evaluation':r})
+    for quantum in cfg['sensitivity']['rounding_mu']:
+        xx=np.rint(x/quantum)*quantum
+        record('rounded_'+str(int(quantum)),xx,'research',selected_k,{'method':'nearest MU rounding','quantum_mu':quantum})
+    for weight in cfg['sensitivity']['core_objective_weights']:
+        xx,ii=planner.solve(angles,core_weight=weight)
+        if xx is not None:record('weight_'+str(weight),xx,'research',selected_k,ii)
+    robust=[]
+    for a in itertools.combinations(ANGLES,selected_k):
+        xx,ii=planner.solve(a,gains=tuple(cfg['sensitivity']['robust_training_gains']));solves.append(ii)
+        if xx is not None:robust.append((xx,ii))
+    if robust:
+        xx,ii=min(robust,key=lambda p:p[1]['objective']);record('robust_same_budget',xx,'research',selected_k,ii)
         for gain in cfg['sensitivity']['output_gains']:
-            dd=ev.dose(x*gain);r=ev.assess(x,dd,cfg,3)
-            sensitivity.append({'kind':'output_gain','value':gain,'plan':'best_three','evaluation':r})
-        for quantum in cfg['sensitivity']['rounding_mu']:
-            xx=np.rint(x/quantum)*quantum
-            record('rounded_'+str(int(quantum)),xx,'research',3,{'method':'nearest MU rounding','quantum_mu':quantum})
-        for weight in cfg['sensitivity']['core_objective_weights']:
-            xx,ii=planner.solve(angles,core_weight=weight)
-            if xx is not None: record('weight_'+str(weight),xx,'research',3,ii)
-        # Robust search uses same finite set, enforcing both predeclared gain endpoints.
-        robust=[]
-        for a in itertools.combinations(ANGLES,3):
-            xx,ii=planner.solve(a,gains=tuple(cfg['sensitivity']['robust_training_gains']));solves.append(ii)
-            if xx is not None: robust.append((xx,ii))
-        if robust:
-            xx,ii=min(robust,key=lambda p:p[1]['objective']);record('robust_three',xx,'research',3,ii)
-            for gain in cfg['sensitivity']['output_gains']:
-                r=ev.assess(xx,ev.dose(xx*gain),cfg,3)
-                sensitivity.append({'kind':'output_gain','value':gain,'plan':'robust_three','evaluation':r})
-        # Re-solve strongest candidate with another HiGHS algorithm and tighter tolerances.
-        xx,ii=planner.solve(angles,method='highs-ipm',tol=1e-9)
-        if xx is not None: record('tight_ipm_three',xx,'research',3,ii)
+            r=ev.assess(xx,ev.dose(xx*gain),cfg,selected_k)
+            sensitivity.append({'kind':'output_gain','value':gain,'plan':'robust_same_budget','evaluation':r})
+    xx,ii=planner.solve(angles,method='highs-ipm',tol=1e-9)
+    if xx is not None:record('tight_ipm',xx,'research',selected_k,ii)
     payload={'schema':'cort-comparison/v1','paper_lp_reproduced':True,'data_sha256':digest(ROOT/'data/manifest.json'),
         'research_config_sha256':digest(ROOT/'config/research.json'),'controls':ctrl,'plans':records,'solves':solves,
-        'greedy_path':greedy,'sensitivity':sensitivity,'elapsed_seconds':time.perf_counter()-started,
+        'primary_three_beam_feasible':bool(feasible3),'sensitivity_beam_budget':selected_k,'greedy_path':greedy,'sensitivity':sensitivity,'elapsed_seconds':time.perf_counter()-started,
         'environment':{'python':platform.python_version(),'numpy':np.__version__,'scipy':scipy.__version__,'platform':platform.platform(),'machine':platform.machine(),'timing_note':'Other heavy workloads were present. Timings are descriptive, not speedup evidence.'}}
     write_json(out/'comparison.json',payload)
     print('COMPLETE',len(records),'plans;',round(payload['elapsed_seconds'],1),'seconds',flush=True)

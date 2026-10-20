@@ -11,13 +11,14 @@ launcher are not authorized. See [DISCOVERY.md](DISCOVERY.md),
 
 ## Run
 
-Python 3.11+ with binary wheels is recommended; this run uses Python 3.14 on macOS
-arm64. No GPU, commercial solver, or MATLAB is needed. From this directory:
+Python 3.14 with binary wheels is the tested environment (macOS arm64).
+Other Python versions and operating systems have not been verified. No GPU, commercial solver, or MATLAB is needed. From this directory:
 
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install --only-binary=:all: -r requirements.lock
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m rtpilot.verify
+.venv/bin/python -m rtpilot.verify_trial
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
@@ -64,3 +65,8 @@ scatter recalculation, collision checking, or measurement-based QA.
 
 Code: MIT. Authored documentation: CC BY 4.0. CORT data: CC0 with attribution to
 Craft, Bangert, Long, Papp and Unkelbach (2014). See `LICENSE` and `data/README.md`.
+
+The fixed 30-minute contributor trial found a feasible 10-MU-grid improvement; see
+[the assessment](docs/report.md) and [progress chart](results/contributor_progress.png).
+The original three-beam task is numerically infeasible. This exact benchmark is
+recommended for incubation, not an inaugural featured launch.

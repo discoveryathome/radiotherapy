@@ -1,0 +1,46 @@
+[
+  {
+    "case": "continuous",
+    "beam_budget": 5,
+    "quantum_mu": 0,
+    "gain_model": "nominal",
+    "value": "16.904298430189655",
+    "witness": "results/plans/subset_0_72_144_216_288.json",
+    "by": "OpenAI coding agent",
+    "source": "results/comparison.json",
+    "updated": "2026-10-20"
+  },
+  {
+    "case": "continuous",
+    "beam_budget": 4,
+    "quantum_mu": 0,
+    "gain_model": "nominal",
+    "value": "20.52164795770375",
+    "witness": "results/plans/best_nominal.json",
+    "by": "OpenAI coding agent",
+    "source": "results/comparison.json",
+    "updated": "2026-10-20"
+  },
+  {
+    "case": "quantized",
+    "beam_budget": 4,
+    "quantum_mu": 10,
+    "gain_model": "nominal",
+    "value": "20.74358420088504",
+    "witness": "trial/extended-pairs_plan.json",
+    "by": "OpenAI coding agent",
+    "source": "trial/extended-pairs.json",
+    "updated": "2026-10-20"
+  },
+  {
+    "case": "continuous",
+    "beam_budget": 5,
+    "quantum_mu": 0,
+    "gain_model": "global gains 0.98\u20131.02",
+    "value": "21.189390701696453",
+    "witness": "results/plans/robust_five.json",
+    "by": "OpenAI coding agent",
+    "source": "results/robust-five.json",
+    "updated": "2026-10-20"
+  }
+]

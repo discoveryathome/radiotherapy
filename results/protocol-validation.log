@@ -1,0 +1,8 @@
+.: conformant: the required files are present and valid
+  frontier table: 4 cases, 4 open
+  conventions followed: weighted task catalogue, priority log, frontier `reproduce` check
+  convention not followed: coordination channel: manifest has no `coordination` channel
+  convention not followed: review ledger: manifest has no `ledger`
+  convention not followed: result packages: manifest has no `packages` location
+  Conventions are recommended, not required. The stage comes from a hub assessment of
+  the five properties (spec §3), not from this check.

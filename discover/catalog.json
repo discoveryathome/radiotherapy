@@ -1,0 +1,166 @@
+{
+  "schema": "discover-catalog/v0",
+  "priority_revision": 1,
+  "assessed_on": "2026-10-20",
+  "priority_log": "discover/priority-log.md",
+  "status": "Local proposal; launcher paused",
+  "tracks": [
+    {
+      "id": "verification",
+      "weight": 35,
+      "useful_outcome": "Can an independent reviewer find unit, voxel, feasibility or witness-validation errors?",
+      "tasks": [
+        {
+          "id": "verification-01",
+          "question": "Can an independent reviewer find unit, voxel, feasibility or witness-validation errors?",
+          "starting_points": [
+            "docs/planning-spec.md",
+            "docs/literature.md",
+            "docs/report.md"
+          ],
+          "methods": [
+            "Adversarial tests and manual source comparison"
+          ],
+          "acceptance_gate": "Provide reproducible local evidence under frozen inputs; no clinical or unsupported novelty claims. Benchmark changes require a separate version and maintainer review.",
+          "first_step": {
+            "command": [
+              ".venv/bin/python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "expected": "All tests pass, including deliberate invalid-plan rejection."
+          },
+          "bottleneck_link": "DISCOVERY.md#frontier-and-bottleneck",
+          "claim_kind": [
+            "model",
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "requires patient data or clinical systems",
+            "requires changing current objective",
+            "more than 2 GB or unexpected unbounded compute"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discrete-search",
+      "weight": 30,
+      "useful_outcome": "Can a bounded search match exhaustive three-beam quality with fewer LP solves?",
+      "tasks": [
+        {
+          "id": "discrete-search-01",
+          "question": "Can a bounded search match exhaustive three-beam quality with fewer LP solves?",
+          "starting_points": [
+            "docs/planning-spec.md",
+            "docs/literature.md",
+            "docs/report.md"
+          ],
+          "methods": [
+            "Beam replacement, greedy search, constraint generation; compare oracle"
+          ],
+          "acceptance_gate": "Provide reproducible local evidence under frozen inputs; no clinical or unsupported novelty claims. Benchmark changes require a separate version and maintainer review.",
+          "first_step": {
+            "command": [
+              ".venv/bin/python",
+              "-m",
+              "rtpilot.verify"
+            ],
+            "expected": "Published controls and saved-plan checks pass."
+          },
+          "bottleneck_link": "DISCOVERY.md#frontier-and-bottleneck",
+          "claim_kind": [
+            "model",
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "requires patient data or clinical systems",
+            "requires changing current objective",
+            "more than 2 GB or unexpected unbounded compute"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery-model",
+      "weight": 20,
+      "useful_outcome": "What additional discrete aperture constraints create a useful, honest research benchmark?",
+      "tasks": [
+        {
+          "id": "delivery-model-01",
+          "question": "What additional discrete aperture constraints create a useful, honest research benchmark?",
+          "starting_points": [
+            "docs/planning-spec.md",
+            "docs/literature.md",
+            "docs/report.md"
+          ],
+          "methods": [
+            "Specify a fixed aperture library and segment budget; test physics limitations before claims"
+          ],
+          "acceptance_gate": "Provide reproducible local evidence under frozen inputs; no clinical or unsupported novelty claims. Benchmark changes require a separate version and maintainer review.",
+          "first_step": {
+            "command": [
+              ".venv/bin/python",
+              "-m",
+              "rtpilot.verify",
+              "--controls-only"
+            ],
+            "expected": "Published data and original witness pass before designing a separate benchmark."
+          },
+          "bottleneck_link": "DISCOVERY.md#frontier-and-bottleneck",
+          "claim_kind": [
+            "model",
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "requires patient data or clinical systems",
+            "requires changing current objective",
+            "more than 2 GB or unexpected unbounded compute"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "literature",
+      "weight": 15,
+      "useful_outcome": "Which strong discrete-selection baselines and reproducible cases are still missing?",
+      "tasks": [
+        {
+          "id": "literature-01",
+          "question": "Which strong discrete-selection baselines and reproducible cases are still missing?",
+          "starting_points": [
+            "docs/planning-spec.md",
+            "docs/literature.md",
+            "docs/report.md"
+          ],
+          "methods": [
+            "Read primary sources and map objective/constraint differences"
+          ],
+          "acceptance_gate": "Provide reproducible local evidence under frozen inputs; no clinical or unsupported novelty claims. Benchmark changes require a separate version and maintainer review.",
+          "first_step": {
+            "command": [
+              ".venv/bin/python",
+              "-c",
+              "from pathlib import Path; print(Path('docs/literature.md').read_text())"
+            ],
+            "expected": "Print the audited source list, distinguishing full text from abstracts."
+          },
+          "bottleneck_link": "DISCOVERY.md#frontier-and-bottleneck",
+          "claim_kind": [
+            "model",
+            "measured"
+          ],
+          "scope_change_triggers": [
+            "requires patient data or clinical systems",
+            "requires changing current objective",
+            "more than 2 GB or unexpected unbounded compute"
+          ]
+        }
+      ]
+    }
+  ]
+}

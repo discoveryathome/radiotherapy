@@ -1,0 +1,747 @@
+{
+  "path": "trial/quantized_local_plan.json",
+  "start": "trial/rounding/budget4_guard0.5.json",
+  "history": [
+    {
+      "step": 0,
+      "objective_gy": 20.9529561614092,
+      "kind": "start"
+    },
+    {
+      "step": 1,
+      "objective_gy": 20.947227786514972,
+      "kind": "decrement",
+      "remove_column": 212,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 2,
+      "objective_gy": 20.941499411620747,
+      "kind": "decrement",
+      "remove_column": 212,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 3,
+      "objective_gy": 20.935771036726514,
+      "kind": "decrement",
+      "remove_column": 212,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 4,
+      "objective_gy": 20.93004326359373,
+      "kind": "decrement",
+      "remove_column": 210,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 5,
+      "objective_gy": 20.92431549046094,
+      "kind": "decrement",
+      "remove_column": 210,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 6,
+      "objective_gy": 20.91860198486035,
+      "kind": "decrement",
+      "remove_column": 209,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 7,
+      "objective_gy": 20.912888479259752,
+      "kind": "decrement",
+      "remove_column": 209,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 8,
+      "objective_gy": 20.90719080536848,
+      "kind": "decrement",
+      "remove_column": 214,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 9,
+      "objective_gy": 20.901493867846668,
+      "kind": "decrement",
+      "remove_column": 216,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 10,
+      "objective_gy": 20.89586984472176,
+      "kind": "decrement",
+      "remove_column": 301,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 11,
+      "objective_gy": 20.890251573202427,
+      "kind": "decrement",
+      "remove_column": 300,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 12,
+      "objective_gy": 20.884633301683103,
+      "kind": "decrement",
+      "remove_column": 300,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 13,
+      "objective_gy": 20.8790321515812,
+      "kind": "decrement",
+      "remove_column": 304,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 14,
+      "objective_gy": 20.876637931595972,
+      "kind": "decrement",
+      "remove_column": 136,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 15,
+      "objective_gy": 20.875786631983637,
+      "kind": "decrement",
+      "remove_column": 317,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 16,
+      "objective_gy": 20.87493703686845,
+      "kind": "decrement",
+      "remove_column": 198,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 17,
+      "objective_gy": 20.87422951040768,
+      "kind": "decrement",
+      "remove_column": 63,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 18,
+      "objective_gy": 20.873600019472136,
+      "kind": "decrement",
+      "remove_column": 36,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 19,
+      "objective_gy": 20.873010525610923,
+      "kind": "decrement",
+      "remove_column": 281,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 20,
+      "objective_gy": 20.8724259089401,
+      "kind": "decrement",
+      "remove_column": 285,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 21,
+      "objective_gy": 20.871858769748908,
+      "kind": "decrement",
+      "remove_column": 38,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 22,
+      "objective_gy": 20.871295459331613,
+      "kind": "decrement",
+      "remove_column": 59,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 23,
+      "objective_gy": 20.87078163937376,
+      "kind": "decrement",
+      "remove_column": 29,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 24,
+      "objective_gy": 20.87054935863882,
+      "kind": "decrement",
+      "remove_column": 116,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 25,
+      "objective_gy": 20.870317077903877,
+      "kind": "decrement",
+      "remove_column": 116,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 26,
+      "objective_gy": 20.870094911043893,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 27,
+      "objective_gy": 20.869872744183905,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 28,
+      "objective_gy": 20.869650577323917,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 29,
+      "objective_gy": 20.869428410463932,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 30,
+      "objective_gy": 20.869206243603948,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 31,
+      "objective_gy": 20.868985600839068,
+      "kind": "decrement",
+      "remove_column": 274,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 32,
+      "objective_gy": 20.868767379589258,
+      "kind": "decrement",
+      "remove_column": 271,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 33,
+      "objective_gy": 20.868549158339448,
+      "kind": "decrement",
+      "remove_column": 271,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 34,
+      "objective_gy": 20.8683323784455,
+      "kind": "decrement",
+      "remove_column": 272,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 35,
+      "objective_gy": 20.868116334764416,
+      "kind": "decrement",
+      "remove_column": 273,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 36,
+      "objective_gy": 20.86790029108333,
+      "kind": "decrement",
+      "remove_column": 273,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 37,
+      "objective_gy": 20.86768424740224,
+      "kind": "decrement",
+      "remove_column": 273,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 38,
+      "objective_gy": 20.867469732618765,
+      "kind": "decrement",
+      "remove_column": 275,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 39,
+      "objective_gy": 20.86725555032146,
+      "kind": "decrement",
+      "remove_column": 240,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 40,
+      "objective_gy": 20.867041706721295,
+      "kind": "decrement",
+      "remove_column": 192,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 41,
+      "objective_gy": 20.866827863121124,
+      "kind": "decrement",
+      "remove_column": 192,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 42,
+      "objective_gy": 20.86661401952096,
+      "kind": "decrement",
+      "remove_column": 192,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 43,
+      "objective_gy": 20.86640549056326,
+      "kind": "decrement",
+      "remove_column": 276,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 44,
+      "objective_gy": 20.866197597149736,
+      "kind": "decrement",
+      "remove_column": 239,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 45,
+      "objective_gy": 20.86599081383364,
+      "kind": "decrement",
+      "remove_column": 107,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 46,
+      "objective_gy": 20.865784030517542,
+      "kind": "decrement",
+      "remove_column": 107,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 47,
+      "objective_gy": 20.865577247201443,
+      "kind": "decrement",
+      "remove_column": 107,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 48,
+      "objective_gy": 20.865370495065708,
+      "kind": "decrement",
+      "remove_column": 105,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 49,
+      "objective_gy": 20.865163742929973,
+      "kind": "decrement",
+      "remove_column": 105,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 50,
+      "objective_gy": 20.86495724420206,
+      "kind": "decrement",
+      "remove_column": 101,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 51,
+      "objective_gy": 20.86475124626486,
+      "kind": "decrement",
+      "remove_column": 99,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 52,
+      "objective_gy": 20.864545248327662,
+      "kind": "decrement",
+      "remove_column": 99,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 53,
+      "objective_gy": 20.86433925039046,
+      "kind": "decrement",
+      "remove_column": 99,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 54,
+      "objective_gy": 20.864133252453264,
+      "kind": "decrement",
+      "remove_column": 99,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 55,
+      "objective_gy": 20.863928330176073,
+      "kind": "decrement",
+      "remove_column": 98,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 56,
+      "objective_gy": 20.863749025489344,
+      "kind": "decrement",
+      "remove_column": 69,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 57,
+      "objective_gy": 20.863569720802616,
+      "kind": "decrement",
+      "remove_column": 69,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 58,
+      "objective_gy": 20.863391350830238,
+      "kind": "decrement",
+      "remove_column": 178,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 59,
+      "objective_gy": 20.863218217963315,
+      "kind": "decrement",
+      "remove_column": 331,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 60,
+      "objective_gy": 20.863045501547447,
+      "kind": "decrement",
+      "remove_column": 334,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 61,
+      "objective_gy": 20.86287328900604,
+      "kind": "decrement",
+      "remove_column": 333,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 62,
+      "objective_gy": 20.86270288714774,
+      "kind": "decrement",
+      "remove_column": 330,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 63,
+      "objective_gy": 20.862535126837187,
+      "kind": "decrement",
+      "remove_column": 329,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 64,
+      "objective_gy": 20.86237793282065,
+      "kind": "decrement",
+      "remove_column": 345,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 65,
+      "objective_gy": 20.86222073880411,
+      "kind": "decrement",
+      "remove_column": 345,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 66,
+      "objective_gy": 20.862063544787567,
+      "kind": "decrement",
+      "remove_column": 345,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 67,
+      "objective_gy": 20.86190635077103,
+      "kind": "decrement",
+      "remove_column": 345,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 68,
+      "objective_gy": 20.861749156754488,
+      "kind": "decrement",
+      "remove_column": 345,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 69,
+      "objective_gy": 20.861598807808146,
+      "kind": "decrement",
+      "remove_column": 14,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 70,
+      "objective_gy": 20.856984935977394,
+      "kind": "exchange",
+      "remove_column": 303,
+      "add_column": 203,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 71,
+      "objective_gy": 20.85680346002313,
+      "kind": "decrement",
+      "remove_column": 78,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 72,
+      "objective_gy": 20.856654463489143,
+      "kind": "decrement",
+      "remove_column": 10,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 73,
+      "objective_gy": 20.851843434246586,
+      "kind": "exchange",
+      "remove_column": 212,
+      "add_column": 312,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 74,
+      "objective_gy": 20.85121059101404,
+      "kind": "decrement",
+      "remove_column": 34,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 75,
+      "objective_gy": 20.850988424154053,
+      "kind": "decrement",
+      "remove_column": 242,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 76,
+      "objective_gy": 20.850767767882267,
+      "kind": "decrement",
+      "remove_column": 241,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 77,
+      "objective_gy": 20.85056215525458,
+      "kind": "decrement",
+      "remove_column": 100,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 78,
+      "objective_gy": 20.850356542626884,
+      "kind": "decrement",
+      "remove_column": 100,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 79,
+      "objective_gy": 20.850207546092903,
+      "kind": "decrement",
+      "remove_column": 10,
+      "add_column": null,
+      "max_constraint_violation": 0.0
+    },
+    {
+      "step": 80,
+      "objective_gy": 20.84484797830176,
+      "kind": "exchange",
+      "remove_column": 215,
+      "add_column": 125,
+      "max_constraint_violation": 0.0
+    }
+  ],
+  "evaluation": {
+    "feasible": true,
+    "objective_gy": 20.844847978301765,
+    "metrics": {
+      "OuterTarget": {
+        "min_gy": 50.000005546771895,
+        "mean_gy": 54.97888181723578,
+        "max_gy": 59.97824721966366,
+        "voxels": 7429,
+        "D2_gy": 59.69971292072053,
+        "D5_gy": 59.3447675136191,
+        "D10_gy": 58.80155152534682,
+        "D50_gy": 54.98534824936655,
+        "D95_gy": 50.44967611208567,
+        "D98_gy": 50.11704684852327,
+        "V95_pct": 100.0,
+        "V100_pct": 100.0,
+        "V110_pct": 49.81827971463185,
+        "V120_pct": 0.0
+      },
+      "Core": {
+        "min_gy": 0.9007396378350542,
+        "mean_gy": 16.44585682149768,
+        "max_gy": 40.087198796162454,
+        "voxels": 1280,
+        "D2_gy": 38.2688857035453,
+        "D5_gy": 34.24380414069658,
+        "D10_gy": 31.139010258092437,
+        "D50_gy": 15.081040011087625,
+        "D95_gy": 3.2186056487111085,
+        "D98_gy": 2.098569477212103,
+        "V95_pct": 0.0,
+        "V100_pct": 0.0,
+        "V110_pct": 0.0,
+        "V120_pct": 0.0
+      },
+      "BODY": {
+        "min_gy": 0.0,
+        "mean_gy": 5.051563550650264,
+        "max_gy": 71.57676881742978,
+        "voxels": 599440,
+        "D2_gy": 51.43881235745893,
+        "D5_gy": 36.48728721286828,
+        "D10_gy": 21.756477437475436,
+        "D50_gy": 0.0,
+        "D95_gy": 0.0,
+        "D98_gy": 0.0,
+        "V95_pct": 2.857833978379821,
+        "V100_pct": 2.404577605765381,
+        "V110_pct": 1.070999599626318,
+        "V120_pct": 0.08874949953289737
+      },
+      "HealthyBody": {
+        "min_gy": 0.0,
+        "mean_gy": 4.398991156804082,
+        "max_gy": 71.57676881742978,
+        "voxels": 590731,
+        "D2_gy": 45.70507792281378,
+        "D5_gy": 31.741736204634346,
+        "D10_gy": 18.710754938676853,
+        "D50_gy": 0.0,
+        "D95_gy": 0.0,
+        "D98_gy": 0.0,
+        "V95_pct": 1.642371908702946,
+        "V100_pct": 1.182433290279332,
+        "V110_pct": 0.4602771819999289,
+        "V120_pct": 0.09005791129972864
+      }
+    },
+    "active_angles": [
+      0,
+      72,
+      144,
+      216
+    ],
+    "beam_budget": 4,
+    "violations": {
+      "target_min_gy": 0.0,
+      "target_max_gy": 0.0,
+      "core_max_gy": 0.0,
+      "negative_fluence_mu": 0.0,
+      "beam_budget": 0,
+      "max_beamlet_mu": 0.0,
+      "total_beamlet_mu": 0.0,
+      "core_mean_gy": 0.0,
+      "healthy_mean_gy": 0.0
+    },
+    "tg119_reference_goals_pass": false,
+    "max_fluence_mu": 3480.0,
+    "sum_beamlet_fluence_mu": 322770.0
+  },
+  "dose_recomputation_max_error_gy": 6.394884621840902e-14,
+  "grid_residual_mu": 0.0,
+  "seconds": 10.94174870790448,
+  "cpu_seconds": 3.599616,
+  "stopping_note": "Bounded heuristic; no global discrete-optimality claim."
+}

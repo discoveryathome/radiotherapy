@@ -27,10 +27,31 @@ class Planner:
         c=sum(w*self.means[name] for name,w in weights.items())
         return c[cols],sparse.vstack(A,format='csr')[:,cols],np.concatenate(b),cols
 
-    def solve(self,angles,*,gains=(1.,),core_weight=None,method='highs-ipm',tol=1e-7):
+    def solve(self,angles,*,gains=(1.,),core_weight=None,method='warm',tol=1e-7):
         t=time.perf_counter();c,A,b,cols=self.formulation(angles,gains,core_weight)
+        if method=='warm':
+            from .warm import solve
+            xx,info=solve(c,A,b,self.cfg.get('max_beamlet_mu'),tol=tol)
+            info.update(angles=list(angles),gains=list(gains),core_weight=core_weight,method=method)
+            if xx is None:return None,info
+            x=np.zeros(418);x[cols]=xx
+            return x,info
+        if method=='clarabel':
+            from .conic import solve
+            xx,info=solve(c,A,b,self.cfg.get('max_beamlet_mu'),tol=min(tol,1e-9))
+            info.update(angles=list(angles),gains=list(gains),core_weight=core_weight,method=method)
+            if xx is None:return None,info
+            x=np.zeros(418);x[cols]=xx
+            return x,info
+        if method=='adaptive':
+            from .adaptive import solve
+            xx,info=solve(c,A,b,self.cfg.get('max_beamlet_mu'),tol=tol)
+            info.update(angles=list(angles),gains=list(gains),core_weight=core_weight,method=method)
+            if xx is None:return None,info
+            x=np.zeros(418);x[cols]=xx
+            return x,info
         result=linprog(c,A_ub=A,b_ub=b,bounds=(0,self.cfg.get('max_beamlet_mu')),method=method,
-            options={'dual_feasibility_tolerance':tol,'primal_feasibility_tolerance':tol,'time_limit':90})
+            options={'dual_feasibility_tolerance':tol,'primal_feasibility_tolerance':tol,'time_limit':300,'threads':1})
         info={'angles':list(angles),'status':int(result.status),'message':result.message,'seconds':time.perf_counter()-t,'iterations':int(result.nit),'gains':list(gains),'core_weight':core_weight,'method':method}
         if result.success:
             x=np.zeros(418);x[cols]=result.x

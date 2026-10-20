@@ -1,0 +1,87 @@
+{
+  "schema": "discover-frontier/v0",
+  "statement": "Reproduces CORT Table 3. Records numerically optimized continuous four/five-beam research plans, a feasible four-beam 10-MU-grid incumbent, and a five-beam synthetic global-gain-robust plan. All three-beam subsets are numerically infeasible under v1. No clinical or novelty claim.",
+  "status": "Local author-checked pilot; featured launch not recommended for this exact benchmark",
+  "evidence_level": [
+    "author-checked"
+  ],
+  "claim_kind": [
+    "model",
+    "measured"
+  ],
+  "scope": "Original CORT TG119 synthetic phantom, pinned matrices and config/research.json. Compare table rows only at identical case, beam budget, quantum and gain model. Quantized incumbent is not proven optimal.",
+  "assumptions": [
+    {
+      "id": "physics",
+      "statement": "Original QIB influence model is accepted as a computational benchmark only; physical accuracy and actual delivery are unvalidated.",
+      "status": "open",
+      "link": "docs/planning-spec.md"
+    },
+    {
+      "id": "review",
+      "statement": "Independent reviewer and medical-physics interpretation review are outstanding.",
+      "status": "open",
+      "link": "docs/report.md"
+    }
+  ],
+  "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4326207/",
+    "https://doi.org/10.5524/100110",
+    "results/comparison.json",
+    "trial/extended-pairs.json"
+  ],
+  "table": {
+    "path": "discover/records.json",
+    "format": "json",
+    "key": [
+      "case",
+      "beam_budget",
+      "quantum_mu",
+      "gain_model"
+    ],
+    "value": "value",
+    "direction": "lower-is-better",
+    "object": "witness",
+    "check_row": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.evaluate",
+      "{witness}",
+      "--require-feasible"
+    ],
+    "check_row_minutes": 1,
+    "by": "by",
+    "source": "source",
+    "updated": "updated"
+  },
+  "reproduce": "bash scripts/reproduce.sh",
+  "reproduce_full": "See README.md and docs/report.md for optimizer and trial regeneration commands.",
+  "reproduce_minutes": 3,
+  "prerequisites": [
+    "Python virtual environment with requirements.lock binary wheels; original pinned data included"
+  ],
+  "review": "docs/report.md#review-status-and-reproducibility",
+  "updated_on": "2026-10-20",
+  "artifacts": [
+    {
+      "path": "data/manifest.json",
+      "sha256": "7fa83712b659402d0243e98a525a8606172f0eb56d2ea6d70a2e3fb6516145ba",
+      "role": "frozen input"
+    },
+    {
+      "path": "config/research.json",
+      "sha256": "6e63b6705532f02742bfff50bf6fa9cca8c2faa52470df808bdd177b32e6489e",
+      "role": "frozen input"
+    },
+    {
+      "path": "config/paper.json",
+      "sha256": "c7babe8aee3b8f97727aedfa8088c43ca69282c8b951c4cfb1a4ed413361ce60",
+      "role": "frozen input"
+    },
+    {
+      "path": "trial/extended-pairs_plan.json",
+      "sha256": "bad412754f2b13baaf17f41abd0a341376878eadb3ea3e92cda5a3251f941e40",
+      "role": "witness"
+    }
+  ]
+}

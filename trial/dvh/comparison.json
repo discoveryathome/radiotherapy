@@ -1,0 +1,130 @@
+{
+  "plans": [
+    {
+      "base": "subset_0_72_144_216_288",
+      "strategy": "all_voxel_caps",
+      "iteration": 0,
+      "optimizer": {
+        "status": 2,
+        "message": "HighsModelStatus.kInfeasible",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 6.345823381461559,
+            "full_max_violation": 48.42805967928018
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 10.391992816927502,
+            "full_max_violation": 39.351470128179955
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 13.713976531037137,
+            "full_max_violation": 33.386535167079
+          }
+        ],
+        "seconds": 1.9826471669366583,
+        "cpu_seconds": 0.48976799999999976
+      }
+    },
+    {
+      "base": "subset_0_72_144_216_288",
+      "strategy": "hot_voxel_exemptions",
+      "iteration": 0,
+      "optimizer": {
+        "status": 2,
+        "message": "HighsModelStatus.kInfeasible",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 5.582640741308534,
+            "full_max_violation": 47.65016509374796
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 10.09856461373493,
+            "full_max_violation": 38.231307152447556
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 11.832702684076837,
+            "full_max_violation": 32.63325654059322
+          },
+          {
+            "round": 3,
+            "rows": 1026,
+            "objective": 14.222979405761123,
+            "full_max_violation": 30.67140526707155
+          }
+        ],
+        "seconds": 3.64671504101716,
+        "cpu_seconds": 0.977357
+      }
+    },
+    {
+      "base": "subset_0_72_144_216",
+      "strategy": "all_voxel_caps",
+      "iteration": 0,
+      "optimizer": {
+        "status": 2,
+        "message": "HighsModelStatus.kInfeasible",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 7.614180387309181,
+            "full_max_violation": 45.67443406368236
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 11.511411197412817,
+            "full_max_violation": 27.145393369176286
+          }
+        ],
+        "seconds": 0.7490228329552338,
+        "cpu_seconds": 0.2522549999999999
+      }
+    },
+    {
+      "base": "subset_0_72_144_216",
+      "strategy": "hot_voxel_exemptions",
+      "iteration": 0,
+      "optimizer": {
+        "status": 2,
+        "message": "HighsModelStatus.kInfeasible",
+        "history": [
+          {
+            "round": 0,
+            "rows": 258,
+            "objective": 7.611705539353064,
+            "full_max_violation": 47.591030488865655
+          },
+          {
+            "round": 1,
+            "rows": 514,
+            "objective": 9.742586919748389,
+            "full_max_violation": 35.905182878539534
+          },
+          {
+            "round": 2,
+            "rows": 770,
+            "objective": 12.332064422310468,
+            "full_max_violation": 20.278638879102907
+          }
+        ],
+        "seconds": 3.6254524580435827,
+        "cpu_seconds": 0.6433680000000006
+      }
+    }
+  ],
+  "elapsed_seconds": 16.77502970804926,
+  "cpu_seconds": 4.2558750000000005
+}

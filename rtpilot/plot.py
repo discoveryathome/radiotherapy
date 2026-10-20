@@ -16,7 +16,12 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--results',default='results');args=ap.parse_args()
     folder=ROOT/args.results;payload=json.loads((folder/'comparison.json').read_text());ev=Evaluator()
     allrows={r['name']:r for r in payload['plans']}
-    names=[n for n in ['uniform','quadratic_penalty','subset_0_72_144_216_288','best_three','robust_three'] if n in allrows]
+    extra=folder/'robust-five.json'
+    if extra.exists():
+        rr=json.loads(extra.read_text())
+        if 'path' in rr:allrows['robust_five']={'name':'robust_five','path':rr['path']}
+    labels={'uniform':'uniform (infeasible)','quadratic_penalty':'quadratic penalty (infeasible)','subset_0_72_144_216_288':'five-beam LP','best_nominal':'best four-beam LP','robust_five':'five-beam gain-robust LP'}
+    names=[n for n in ['uniform','quadratic_penalty','subset_0_72_144_216_288','best_nominal','robust_five'] if n in allrows]
     doses={n:ev.evaluate(ROOT/allrows[n]['path'])[1] for n in names}
     plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False})
     fig,axs=plt.subplots(1,3,figsize=(14,4.6),layout='constrained')
@@ -25,14 +30,14 @@ def main():
             values=np.sort(d[ev.vois[structure]])
             thresholds=np.linspace(0,70,701)
             volume=100*(len(values)-np.searchsorted(values,thresholds,side='left'))/len(values)
-            ax.plot(thresholds,volume,label=name.replace('subset_0_72_144_216_288','all five LP').replace('_',' '),lw=1.6)
+            ax.plot(thresholds,volume,label=labels.get(name,name.replace('_',' ')),lw=1.6)
         ax.set(title=structure,xlabel='Dose (Gy)',ylabel='Volume receiving at least dose (%)',ylim=(0,101),xlim=(0,70));ax.grid(alpha=.2)
-    axs[0].axvline(50,color='black',alpha=.4,ls=':');axs[0].legend(fontsize=8)
+    axs[0].axvline(50,color='black',alpha=.4,ls=':');axs[0].axvline(55,color='black',alpha=.4,ls='--');axs[1].axvline(25,color='black',alpha=.4,ls='--');axs[0].legend(fontsize=8)
     fig.suptitle('CORT synthetic phantom • dose-volume histograms • research only',fontsize=14)
     fig.savefig(folder/'dvh.png',dpi=160);fig.savefig(folder/'dvh.svg');plt.close(fig)
     # Choose the slice with most target voxels by a fixed geometry rule.
     target=ev.vois['OuterTarget'];sl=int(np.argmax(np.bincount(target//(167*167),minlength=129)))
-    show=[n for n in ['subset_0_72_144_216_288','best_three','robust_three'] if n in doses]
+    show=[n for n in ['subset_0_72_144_216_288','best_nominal','robust_five'] if n in doses]
     fig,axs=plt.subplots(1,len(show),figsize=(5*len(show),4.7),layout='constrained',squeeze=False)
     for ax,name in zip(axs[0],show):
         plane=doses[name].reshape((167,167,129),order='F')[:,:,sl]
@@ -41,7 +46,7 @@ def main():
             if structure=='HealthyBody':continue
             mask=np.zeros(167*167*129,dtype=np.uint8);mask[ev.vois[structure]]=1
             ax.contour(mask.reshape((167,167,129),order='F')[:,:,sl],levels=[.5],colors=[color],linewidths=1.3)
-        ax.set(xlim=(45,120),ylim=(120,45),xlabel='LR voxel index',ylabel='AP voxel index',title=name.replace('subset_0_72_144_216_288','all five LP').replace('_',' '))
+        ax.set(xlim=(45,120),ylim=(120,45),xlabel='LR voxel index',ylabel='AP voxel index',title=labels.get(name,name.replace('_',' ')))
     fig.colorbar(im,ax=list(axs[0]),label='Dose (Gy)',shrink=.8)
     fig.suptitle(f'Synthetic phantom dose • axial slice {sl} (zero-based) • common color scale',fontsize=13)
     fig.savefig(folder/'dose_maps.png',dpi=160);plt.close(fig)

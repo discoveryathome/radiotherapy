@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/run.py", line 90, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/run.py", line 31, in main
+    if x is None: raise RuntimeError(pinfo)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: {'status': 4, 'message': 'AlmostSolved', 'iterations': 29, 'seconds': 129.7124735409161, 'solver': 'Clarabel 0.11.1', 'angles': [0, 72, 144, 216, 288], 'gains': [1.0], 'core_weight': None, 'method': 'clarabel'}

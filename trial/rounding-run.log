@@ -1,0 +1,6 @@
+budget 4 guard 1.0 feasible True objective 21.381225900270444
+budget 4 guard 0.5 feasible True objective 20.952956161409205
+budget 4 guard 0.25 feasible False objective 20.729709354826532
+budget 5 guard 1.0 feasible True objective 17.436492343768705
+budget 5 guard 0.5 feasible True objective 17.162532587585527
+budget 5 guard 0.25 feasible False objective 17.041182502031816
