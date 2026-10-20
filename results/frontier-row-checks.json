@@ -1,0 +1,132 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.check_row",
+      "results/plans/subset_0_72_144_216_288.json",
+      "--beams",
+      "5",
+      "--quantum",
+      "0",
+      "--gain-min",
+      "1.0",
+      "--gain-max",
+      "1.0",
+      "--expected-score",
+      "16.904298430189655"
+    ],
+    "returncode": 0,
+    "output": "{\"valid\": true, \"beam_budget\": 5, \"quantum_mu\": 0.0, \"gain_interval\": [1.0, 1.0], \"nominal_objective_gy\": 16.904298430189655}\n"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.check_row",
+      "results/plans/best_nominal.json",
+      "--beams",
+      "4",
+      "--quantum",
+      "0",
+      "--gain-min",
+      "1.0",
+      "--gain-max",
+      "1.0",
+      "--expected-score",
+      "20.52164795770375"
+    ],
+    "returncode": 0,
+    "output": "{\"valid\": true, \"beam_budget\": 4, \"quantum_mu\": 0.0, \"gain_interval\": [1.0, 1.0], \"nominal_objective_gy\": 20.52164795770375}\n"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.check_row",
+      "trial/extended-pairs_plan.json",
+      "--beams",
+      "4",
+      "--quantum",
+      "10",
+      "--gain-min",
+      "1.0",
+      "--gain-max",
+      "1.0",
+      "--expected-score",
+      "20.74358420088504"
+    ],
+    "returncode": 0,
+    "output": "{\"valid\": true, \"beam_budget\": 4, \"quantum_mu\": 10.0, \"gain_interval\": [1.0, 1.0], \"nominal_objective_gy\": 20.74358420088504}\n"
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "rtpilot.check_row",
+      "results/plans/robust_five.json",
+      "--beams",
+      "5",
+      "--quantum",
+      "0",
+      "--gain-min",
+      "0.98",
+      "--gain-max",
+      "1.02",
+      "--expected-score",
+      "21.189390701696453"
+    ],
+    "returncode": 0,
+    "output": "{\"valid\": true, \"beam_budget\": 5, \"quantum_mu\": 0.0, \"gain_interval\": [0.98, 1.02], \"nominal_objective_gy\": 21.189390701696453}\n"
+  },
+  {
+    "negative_control": [
+      "results/plans/best_nominal.json",
+      "--beams",
+      "4",
+      "--quantum",
+      "10"
+    ],
+    "rejected": true,
+    "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 19, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 14, in main\n    if args.quantum and np.abs(x/args.quantum-np.rint(x/args.quantum)).max()>1e-9:raise ValueError('Fluence is off the required grid')\n                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Fluence is off the required grid\n"
+  },
+  {
+    "negative_control": [
+      "results/plans/best_nominal.json",
+      "--beams",
+      "3",
+      "--quantum",
+      "0"
+    ],
+    "rejected": true,
+    "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 19, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 13, in main\n    if p['beam_budget']!=args.beams:raise ValueError('Wrong beam-budget category')\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Wrong beam-budget category\n"
+  },
+  {
+    "negative_control": [
+      "results/plans/subset_0_72_144_216_288.json",
+      "--beams",
+      "5",
+      "--quantum",
+      "0",
+      "--gain-min",
+      ".98",
+      "--gain-max",
+      "1.02"
+    ],
+    "rejected": true,
+    "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 19, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 17, in main\n    if not r['feasible']:raise ValueError('Infeasible at required output gain '+str(gain))\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Infeasible at required output gain 0.98\n"
+  },
+  {
+    "negative_control": [
+      "trial/extended-pairs_plan.json",
+      "--beams",
+      "4",
+      "--quantum",
+      "10",
+      "--expected-score",
+      "1"
+    ],
+    "rejected": true,
+    "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 203, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 19, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy/rtpilot/check_row.py\", line 12, in main\n    if args.expected_score is not None and (not np.isfinite(args.expected_score) or abs(score-args.expected_score)>1e-7):raise ValueError('Claimed score mismatch')\n                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Claimed score mismatch\n"
+  }
+]

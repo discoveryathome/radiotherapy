@@ -45,9 +45,18 @@
     "check_row": [
       ".venv/bin/python",
       "-m",
-      "rtpilot.evaluate",
+      "rtpilot.check_row",
       "{witness}",
-      "--require-feasible"
+      "--beams",
+      "{beam_budget}",
+      "--quantum",
+      "{quantum_mu}",
+      "--gain-min",
+      "{gain_min}",
+      "--gain-max",
+      "{gain_max}",
+      "--expected-score",
+      "{value}"
     ],
     "check_row_minutes": 1,
     "by": "by",

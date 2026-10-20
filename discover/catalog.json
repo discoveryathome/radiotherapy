@@ -1,13 +1,13 @@
 {
   "schema": "discover-catalog/v0",
-  "priority_revision": 1,
+  "priority_revision": 2,
   "assessed_on": "2026-10-20",
   "priority_log": "discover/priority-log.md",
   "status": "Local proposal; launcher paused",
   "tracks": [
     {
       "id": "verification",
-      "weight": 35,
+      "weight": 30,
       "useful_outcome": "Can an independent reviewer find unit, voxel, feasibility or witness-validation errors?",
       "tasks": [
         {
@@ -49,28 +49,28 @@
     },
     {
       "id": "discrete-search",
-      "weight": 30,
-      "useful_outcome": "Can a bounded search match exhaustive three-beam quality with fewer LP solves?",
+      "weight": 25,
+      "useful_outcome": "Can multi-coordinate 10-MU changes improve the verified four-beam incumbent without changing the frozen dose model or limits?",
       "tasks": [
         {
           "id": "discrete-search-01",
-          "question": "Can a bounded search match exhaustive three-beam quality with fewer LP solves?",
+          "question": "Can multi-coordinate 10-MU changes improve the verified four-beam incumbent without changing the frozen dose model or limits?",
           "starting_points": [
             "docs/planning-spec.md",
             "docs/literature.md",
             "docs/report.md"
           ],
           "methods": [
-            "Beam replacement, greedy search, constraint generation; compare oracle"
+            "Quantization-aware LP guards, integer exchanges, bounded MILP repair; compare the continuous lower bound"
           ],
-          "acceptance_gate": "Provide reproducible local evidence under frozen inputs; no clinical or unsupported novelty claims. Benchmark changes require a separate version and maintainer review.",
+          "acceptance_gate": "A four-beam 10-MU-grid witness with score below 20.74358420088504 by at least 0.00001 Gy, all frozen constraints passing, and independently recomputed metrics. Report remaining gap to continuous bound 20.52164795770375. No clinical or novelty claim.",
           "first_step": {
             "command": [
               ".venv/bin/python",
               "-m",
-              "rtpilot.verify"
+              "rtpilot.verify_trial"
             ],
-            "expected": "Published controls and saved-plan checks pass."
+            "expected": "All nine stored trial witnesses pass independent replay, including rejection verdicts and 10-MU-grid checks."
           },
           "bottleneck_link": "DISCOVERY.md#frontier-and-bottleneck",
           "claim_kind": [
@@ -87,7 +87,7 @@
     },
     {
       "id": "delivery-model",
-      "weight": 20,
+      "weight": 30,
       "useful_outcome": "What additional discrete aperture constraints create a useful, honest research benchmark?",
       "tasks": [
         {

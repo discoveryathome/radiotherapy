@@ -8,7 +8,9 @@
     "witness": "results/plans/subset_0_72_144_216_288.json",
     "by": "OpenAI coding agent",
     "source": "results/comparison.json",
-    "updated": "2026-10-20"
+    "updated": "2026-10-20",
+    "gain_min": 1.0,
+    "gain_max": 1.0
   },
   {
     "case": "continuous",
@@ -19,7 +21,9 @@
     "witness": "results/plans/best_nominal.json",
     "by": "OpenAI coding agent",
     "source": "results/comparison.json",
-    "updated": "2026-10-20"
+    "updated": "2026-10-20",
+    "gain_min": 1.0,
+    "gain_max": 1.0
   },
   {
     "case": "quantized",
@@ -30,7 +34,9 @@
     "witness": "trial/extended-pairs_plan.json",
     "by": "OpenAI coding agent",
     "source": "trial/extended-pairs.json",
-    "updated": "2026-10-20"
+    "updated": "2026-10-20",
+    "gain_min": 1.0,
+    "gain_max": 1.0
   },
   {
     "case": "continuous",
@@ -41,6 +47,8 @@
     "witness": "results/plans/robust_five.json",
     "by": "OpenAI coding agent",
     "source": "results/robust-five.json",
-    "updated": "2026-10-20"
+    "updated": "2026-10-20",
+    "gain_min": 0.98,
+    "gain_max": 1.02
   }
 ]
