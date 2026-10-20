@@ -1,0 +1,15 @@
+{
+  "name": "Featured-pilot contributor feasibility trial",
+  "duration_minutes": 30,
+  "start_utc": "2026-10-20T20:18:00Z",
+  "end_utc": "2026-10-20T20:48:00Z",
+  "participant": "same setup agent, isolated documented trial; not a blind newcomer or independent reviewer",
+  "maintainer": "Douglas Colkitt",
+  "frozen_inputs": ["data/manifest.json", "config/research.json", "config/paper.json"],
+  "primary_task": "Find and independently verify a feasible 3-beam plan under the frozen research profile, compare with conventional and exhaustive baselines",
+  "secondary_task": "Investigate whether the additional pre-existing TG119 reference goals can be met without relaxing the primary research constraints",
+  "secondary_acceptance": "Both research feasibility and tg119_reference_goals_pass must be true; compare at equal beam budget",
+  "allowed": ["solver formulation and algorithm choices", "discrete beam subsets", "adaptive constraint generation", "dose-volume active-set search", "numerical tests and public-demo figures"],
+  "forbidden": ["changing pinned data", "relaxing or reweighting primary benchmark", "claiming clinical safety", "claiming novelty from convex LP or five-beam enumeration"],
+  "assess": ["time to first verified result", "gain over starting method", "gap to strong baseline", "agent reasoning versus solver compute", "home CPU resource requirements", "demo clarity", "remaining nontrivial improvement opportunities"]
+}
