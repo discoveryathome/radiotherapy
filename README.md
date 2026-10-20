@@ -1,12 +1,13 @@
-# Radiotherapy optimization — Discovery@Home local pilot
+# Radiotherapy optimization — Discovery@Home incubation pilot
 
 Can fewer beam directions preserve target coverage while reducing dose to healthy
 structures? This research-only pilot uses the original public CORT **synthetic
 TG119 phantom**: five angles and 418 beamlets. It never connects to treatment
 systems, imports clinical patient data, or produces treatment recommendations.
 
-Douglas Colkitt is the maintainer. This is a local proposal; publication and a donor
-launcher are not authorized. See [DISCOVERY.md](DISCOVERY.md),
+Douglas Colkitt is the maintainer. The pilot is hosted privately at
+[discoveryathome/radiotherapy](https://github.com/discoveryathome/radiotherapy).
+The public launcher remains paused; no hub submission is authorized. See [DISCOVERY.md](DISCOVERY.md),
 [the planning specification](docs/planning-spec.md), and [AGENTS.md](AGENTS.md).
 
 ## Run

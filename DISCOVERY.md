@@ -45,7 +45,8 @@ report that and retain the evidence rather than modify the benchmark.
 Douglas Colkitt agreed to maintain this pilot on 2026-10-20. Weekly review capacity
 has not been specified. The public launcher remains paused until he approves launch,
 sets review capacity, and reviews both the verifier and benchmark framing. No hub
-consent, repository publication, or external messages are authorized by this setup.
+consent or external messages are authorized. The maintainer authorized private
+GitHub hosting at discoveryathome/radiotherapy on 2026-10-20; do not submit a hub PR.
 
 Review should first reproduce the witness and reject-invalid tests, then inspect
 algorithm changes and compare against the strongest relevant baseline. Benchmark

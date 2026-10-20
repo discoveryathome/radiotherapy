@@ -4,7 +4,7 @@
 
 ## What was delivered
 
-Original SHA-256-pinned CORT TG119 phantom matrices, frozen objectives, a working LP optimizer and conventional quadratic/uniform baselines, exhaustive beam-subset comparison, an independent full-grid dose evaluator, rejected-invalid tests, DVHs and spatial dose plots, synthetic gain sensitivity, numerical infeasibility witnesses, a discrete quantization experiment, and Discovery@Home local project files. Douglas Colkitt is the confirmed maintainer. Nothing was published or connected to a clinical system.
+Original SHA-256-pinned CORT TG119 phantom matrices, frozen objectives, a working LP optimizer and conventional quadratic/uniform baselines, exhaustive beam-subset comparison, an independent full-grid dose evaluator, rejected-invalid tests, DVHs and spatial dose plots, synthetic gain sensitivity, numerical infeasibility witnesses, a discrete quantization experiment, and Discovery@Home local project files. Douglas Colkitt is the confirmed maintainer. The trial ran locally; private GitHub hosting was subsequently authorized. No hub submission or clinical-system connection was made.
 
 ## Reproduction and candidate comparison
 

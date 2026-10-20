@@ -9,7 +9,7 @@ matrices, voxel mapping, profile hashes and evaluation code. Candidate work must
 not change the evaluator to pass. A profile change requires a new benchmark version
 and maintainer review. Independent verification is cheap; full enumeration is slower.
 
-No external posting or repository publication is authorized. Record local evidence
-and a fenced discover JSON handoff. Douglas Colkitt maintains the proposal; review
+The maintainer authorized private hosting at discoveryathome/radiotherapy. No hub
+PR or external messages are authorized. Record evidence and a fenced discover JSON handoff. Douglas Colkitt maintains the proposal; review
 capacity and public launch approval are not yet declared. Do not claim novelty from
 fixed-beam convex optimization or from beating a deliberately weak baseline.

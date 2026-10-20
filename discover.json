@@ -13,7 +13,7 @@
       "name": "Douglas Colkitt"
     }
   ],
-  "canonical_repo": "file:///Users/colkitt/discover-work/incubatedPilots/radiotherapy/start-radiotherapy",
+  "canonical_repo": "https://github.com/discoveryathome/radiotherapy",
   "entry": {
     "agents": "AGENTS.md",
     "project": "DISCOVERY.md",
@@ -44,7 +44,7 @@
   },
   "review": {
     "paused": true,
-    "note": "Douglas Colkitt agreed to maintain. Review capacity and public launch approval remain unspecified; no hub consent or publication."
+    "note": "Douglas Colkitt agreed to maintain. Review capacity and public launch approval remain unspecified; private GitHub hosting authorized; no hub consent."
   },
   "requirements": {
     "arch": [
