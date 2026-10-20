@@ -1,0 +1,23 @@
+{
+  "start_utc": "2026-10-20T20:18:00+00:00",
+  "completed_utc": "2026-10-20T20:48:15.734942+00:00",
+  "elapsed_seconds": 1815.734942,
+  "participant": "same setup agent; not blind or independent-human trial",
+  "tested_commit": "2bd696dac07092812ba9feda6ce5bb9faa06987a",
+  "maintainer": "Douglas Colkitt",
+  "research_inputs_and_core_evaluator_unchanged": true,
+  "continuous_three_beam_task": "numerically infeasible for all 10 subsets",
+  "quantized_four_beam_start_score_gy": 21.381225900270444,
+  "quantized_four_beam_final_score_gy": 20.74358420088504,
+  "improvement_percent": 2.9822504208111833,
+  "continuous_lower_bound_gy": 20.52164795770375,
+  "reference_goals_pass": false,
+  "final_quantized_gain_robust": false,
+  "clean_replay_seconds": 41.71,
+  "clean_replay_cpu_seconds": 12.68,
+  "clean_replay_peak_rss_bytes": 489947136,
+  "tests_passed": 16,
+  "frontier_positive_checks": 4,
+  "frontier_negative_checks": 4,
+  "recommendation": "Incubate this benchmark; define a stronger physically defensible multi-instance discrete track before featured launch."
+}

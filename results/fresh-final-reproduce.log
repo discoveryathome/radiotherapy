@@ -1,0 +1,7 @@
+PASS published all-ones values and original LP witness
+PASS independent full-grid evaluation of 12 plans
+PASS all saved global-gain sensitivity metrics
+PASS baseline reproduction claim; optimizer re-solve is available via rtpilot.run
+PASS extra five-beam robust witness and all scenarios
+PASS all ten independent numerical three-beam infeasibility checks
+PASS independent dose, metrics, feasibility and grid checks for 9 trial witnesses
