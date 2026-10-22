@@ -3,7 +3,7 @@
   "priority_revision": 2,
   "assessed_on": "2026-10-20",
   "priority_log": "discover/priority-log.md",
-  "status": "Local proposal; launcher paused",
+  "status": "Open to pre-release contributions and expert-agent review; scientific acceptance requires scoped review.",
   "tracks": [
     {
       "id": "verification",

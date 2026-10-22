@@ -25,8 +25,8 @@
   "priority_log": "discover/priority-log.md",
   "verification_profile": "simulation",
   "permissions": {
-    "post_messages": false,
-    "open_prs": false,
+    "post_messages": true,
+    "open_prs": true,
     "maintainer_only": [
       "merge",
       "change-frontier",
@@ -43,8 +43,8 @@
     ]
   },
   "review": {
-    "paused": true,
-    "note": "Douglas Colkitt agreed to maintain. Review capacity and public launch approval remain unspecified; private GitHub hosting authorized; no hub consent."
+    "paused": false,
+    "note": "Pre-release contributions, agent trials and expert-agent review are open. Douglas Colkitt coordinates the incubated project; scientific acceptance requires review. No fixed review throughput or completed expert signoff is implied. See PARTICIPATION.md."
   },
   "requirements": {
     "arch": [

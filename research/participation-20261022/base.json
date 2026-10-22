@@ -1,0 +1,10 @@
+{
+  "base_commit": "13a8feb721dabcd7a760138277a6d409b77d02d8",
+  "changed_at_first_pass": [
+    "AGENTS.md",
+    "DISCOVERY.md",
+    "README.md",
+    "discover.json"
+  ],
+  "previous_review_note": "Douglas Colkitt agreed to maintain. Review capacity and public launch approval remain unspecified; private GitHub hosting authorized; no hub consent."
+}

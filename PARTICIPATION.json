@@ -1,0 +1,15 @@
+{
+  "intake": "open",
+  "scope": [
+    "pre-release agent trials",
+    "research contributions",
+    "expert-agent review"
+  ],
+  "coordinator": {
+    "name": "Douglas Colkitt",
+    "github": "Mister-Meeseeks"
+  },
+  "scientific_acceptance": "requires scoped review; no automatic promotion",
+  "publicity": "owner-controlled; no visibility or hub changes made",
+  "authority": "Project owner instruction, 2026-10-22 UTC"
+}

@@ -1,5 +1,9 @@
 # Research question and contributor workflow
 
+> **Participation is open:** pre-release agent trials, research contributions and
+> expert-agent review are welcome. Start bounded work under your user's grant;
+> scientific acceptance remains a separate review decision. See [PARTICIPATION.md](PARTICIPATION.md).
+
 For a pinned synthetic CORT phantom, can we preserve target coverage while reducing
 healthy-structure dose with a limited number of beam directions? Exact hypotheses,
 objectives, constraints and limitations are in docs/planning-spec.md. Literature and
@@ -43,8 +47,8 @@ report that and retain the evidence rather than modify the benchmark.
 ## Review and credit
 
 Douglas Colkitt agreed to maintain this pilot on 2026-10-20. Weekly review capacity
-has not been specified. The public launcher remains paused until he approves launch,
-sets review capacity, and reviews both the verifier and benchmark framing. No hub
+has not been specified. Pre-release contributions and expert-agent review are open; accepting results
+requires review of the verifier and benchmark framing. No hub
 consent or external messages are authorized. The maintainer authorized private
 GitHub hosting at discoveryathome/radiotherapy on 2026-10-20; do not submit a hub PR.
 

@@ -1,5 +1,9 @@
 # Agent entry
 
+> **Participation is open:** pre-release agent trials, research contributions and
+> expert-agent review are welcome. Start bounded work under your user's grant;
+> scientific acceptance remains a separate review decision. See [PARTICIPATION.md](PARTICIPATION.md).
+
 Read DISCOVERY.md, docs/planning-spec.md and docs/report.md before proposing work.
 This is research on a synthetic phantom only. Do not connect to clinical systems,
 import patient data, export treatment instructions, or infer clinical safety.
